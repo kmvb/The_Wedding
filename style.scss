@@ -1,0 +1,624 @@
+ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+// div {
+// 	border: 1px solid black;
+// }
+
+$lightGray: #8B9E9B;
+$darkGray: #6D7578;
+$black: #0D0B0C;
+$yellow: #DECD10;
+$gold: #FFD700;
+$goldenrod: #DAA520;
+$lightgoldenrod: #FAFAD2;
+$whitesmoke: #F5F5F5;
+$ghostwhite: #F8F8FF;
+$silver: #C0C0C0;
+$dimgray: #696969;
+
+
+@greyCircle {
+	border-radius: 50%;
+	background-color: $dimgray;
+	width: 125px;
+	height: 125px;
+	margin:0 auto;
+	text-align: center;
+	color: #383838;
+	padding-top: 35px;
+			}
+// general typography
+
+body {
+	font-family: 'Quicksand', sans serif;
+}
+h1, h2, h3, h4, h5{
+	text-transform: uppercase;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+}
+h3 {
+	font-size: 30px;
+}
+a {
+		font-family: 'Quicksand', sans-serif;
+}
+p {
+		font-family: 'Quicksand', sans-serif;
+}
+
+// Navigation Bar
+
+ul.nav {
+				list-style: none;
+				position: fixed;
+				text-align: center;
+				background: $black;
+				border-bottom: solid 1px $darkGray;
+				left: 0;
+				width: 100%;
+				margin-top:0;
+				z-index: 9999;
+				li {
+						display: inline-block;
+						text-decoration: none;
+						padding: 20px;
+						margin: 0 10px;
+						a {
+							color: white;
+							text-transform: uppercase;
+							text-decoration: none;
+							cursor: pointer;
+							&:hover {
+												text-decoration: underline;
+												color: $goldenrod;
+
+			}
+		}
+	}
+}
+
+// Intro Section
+
+#intro {
+		background-image: url('images/website.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: auto;
+		height: 960px;
+		text-align: center;
+		padding-top: 100px;
+			}
+			.text{
+		h1{
+			letter-spacing: 8px;
+			text-align: center;
+			margin: 0 0 20px 0;
+			padding-top: 150px;
+			font-size: 40px;
+				}
+		h2{
+				letter-spacing: 4px;
+				text-align: center; 
+				bottom: 150px;
+				font-size: 28px;
+				}	
+		}		
+
+// Story Section
+
+#story{
+				width: auto;
+				max-width: 1300px;
+				margin: 0 auto;
+				height: auto;
+				display: block;
+				background-color: $whitesmoke;
+			}
+#bride{
+			width: 50%;
+			float: left;
+			text-align: right;
+			height: auto;
+				.description{
+						padding: 80px 20px 35px 80px;
+						h3 {
+							color: $darkGray;
+							text-transform: uppercase;
+							padding: 0 0 10px 0;
+							}
+							h4{
+								color: $darkGray;
+								padding: 0 0 20px 0;
+								font-size: 25px;
+							}
+							p{
+								color: $darkGray;
+								padding: 0 0 15px 0;
+							}
+					}
+			}
+
+#groom{
+		width: 50%;
+		float: left;
+		text-align: left;
+		height: auto;
+				.description{
+				padding: 80px 80px 35px 20px;
+					h3{
+						font-weight: bold;
+						color: $darkGray;
+						text-transform: uppercase;
+						padding: 0 0 10px 0;
+						}
+						h4{
+							color: $darkGray;
+							padding: 0 0 20px 0;
+							font-size: 25px;
+						}
+					}
+			}
+#couple{
+		text-align: center;
+		width: 700px;
+		margin: 0 auto;
+		height: auto;
+		padding-bottom: 10px;
+		.heart {
+				font-size: 50px;
+				text-align: center;
+				color: rgba(165, 25, 25, 1);
+				padding: 0;
+				margin: 0;
+			}
+			h3{
+				font-weight: bold;
+				color: $darkGray;
+				text-transform: uppercase;
+				padding: 0 0 10px 0;
+			}
+			h4{
+				color: $darkGray;
+				padding: 0 0 20px 0;
+				font-size: 22px;
+				}
+			p{
+				color: $darkGray;
+				padding: 0 0 15px 0;
+				text-align: left;
+				font-size: 18px;
+				}
+		}
+
+
+	// .pulse {
+	// 	-webkit-animation: pulse 1s linear infinite;
+	// }
+	// @-webkit-keyframes "pulse" {
+	//  0% {
+	//    -webkit-transform: scale(1.1);
+	//    transform: scale(1.1);
+	//  }
+	//  50% {
+	//    -webkit-transform: scale(0.8);
+	//    transform: scale(0.8);
+	//  }
+	//  100% {
+	//    -webkit-transform: scale(1);
+	//    transform: scale(1);
+	//  }
+	// }
+
+// Wedding Section
+
+#wedding { 
+	background-color: $black;
+	padding: 0px 15px 15px 15px;
+	border-top: 3px solid lighten($black, 50%);
+	border-bottom: 3px solid lighten($black, 50%);
+				
+		.box {
+				width: 95%;
+				max-width: 1300px;
+				margin: 0 auto;
+				padding: 15px 0 80px 0;
+							h3 {
+								text-align: center;
+								text-transform: uppercase;
+								padding: 35px 0 35px 0;
+									}
+								}
+		.minister {
+			text-align: center;
+			margin: 0 auto;
+			.ministerPicture img {
+				height: 200px;
+		    width: 195px;
+		    overflow: hidden;
+		    border-radius: 50%;
+		     -webkit-filter: grayscale(1);
+			  filter: grayscale(1);
+			}
+			p {
+				color: white;
+				padding: 0 250px 0 250px;
+				text-align: left;
+				font-size: 18px;
+			}
+		}
+							}
+			.clearfloat {
+					clear: both;
+					height: 0;
+					font-size: 1px;
+					line-height: 0;
+									}
+	.bridesmaid, .groomsmen{
+		width: 20%;
+		margin: 0 auto;
+		float: left;
+				.main {
+					background-color: $silver;
+					border-radius: 3px;
+					height: 740px;
+					
+							}
+				.content {
+					padding: 5px 20px;
+						.picture{
+							height: 200px;
+							width: 195px;	
+							overflow: hidden;	
+							border-radius: 50%;					
+							img{
+							display: block;
+							width: 100%;
+							 -webkit-filter: grayscale(1);
+							  filter: grayscale(1);					
+							}
+						}
+						.img2 img{
+							top: 24px;
+							left: 1px;
+							height: 100%;
+						}
+						.img3 img{
+							top: 28px;
+							left: 2px;	
+							height: 100%;
+						}
+						.img5 img{
+							top: 28px;
+							left: 2px;
+							height: 100%;
+						}
+						h4{
+							text-align: center;
+							padding: 0 0 10px 0;
+							text-transform: uppercase;
+						}
+						p{
+							padding: 0 0 15px 4px;
+							text-align: left;
+							color: white;
+							font-size:18px;
+						}
+					}
+				}
+	
+
+	// Location Section
+
+	#location {
+		background-color: $silver;
+		.address{
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 24px;
+			color: black;
+			padding-top: 75px;
+			.sign{
+				border-radius: 50%;
+				background-color: $dimgray;
+				width: 125px;
+				height: 125px;
+				margin:0 auto;
+				text-align: center;
+				color: #383838;
+				padding-top: 28px;
+				padding-left: 6px;
+			}
+			p {
+				font-family: 'Quicksand', sans-serif;
+				font-weight: bold;
+			}
+		}
+				.wrapper {
+									// margin: 0 auto;
+									width: 100%;
+									// padding: 100px 0 35px 0;
+									
+						}
+				}
+	.ceremony, .cocktails, .dinner, .oneDollar, .twoDollar, .threeDollar {
+							width: 33.3333%;
+							height: auto;
+							float: left;
+							color: black;
+							padding: 80px 20px 50px 20px;
+							background-color: $silver;
+							// .details{
+							// 	padding: 0 20px;
+							// 	}
+							img{
+								text-align: center;
+								margin: 0 auto;
+								display: block;
+							}
+							h4{
+								text-transform: uppercase;
+								text-align: center;
+								font-weight: bold;
+								font-size: 22px;
+								color: black;
+							}
+							h5{
+								text-transform: uppercase;
+								text-align: center;
+								font-size: 20px;
+								color: black;
+							}
+							p{
+								text-align: left;
+								font-size: 16px;
+							}
+							a{
+								color: lighten($black, 50%);
+								text-decoration: none;
+							}
+						}
+		.oneDollar, .twoDollar, .threeDollar {
+						.sign{
+									border-radius: 50%;
+									background-color: $dimgray;
+									width: 125px;
+									height: 125px;
+									margin:0 auto;
+									text-align: center;
+									color: #383838;
+									padding-top: 35px;
+							}
+						}
+		.oneDollar, .twoDollar, .threeDollar {
+						border-bottom: 1px solid darken($dimgray, 20%);
+						padding-top: 10px;
+		}
+	// Photo Gallery
+
+	#photo {
+		.container {
+						width: 100%;
+						margin: 0 auto;
+						padding: 20px 80px;
+						background-color: $whitesmoke;
+							h3{
+								text-align: center;
+								color: $darkGray;
+							}
+					.col {
+						width: 20.5%;
+						margin-right: 4.5%;
+						float: left;
+						margin-bottom: 5%;
+						overflow: hidden; 
+						height: 275px;
+						background: white;
+						border: 15px solid white;
+						border-bottom: 40px solid white;
+						box-shadow: 0 0 10px rgba(0,0,0,0.3);
+						border-radius: 4px;
+					}
+					.photo {
+						
+						background-size: cover;
+						background-repeat: no-repeat;
+						background-position: center; 
+					}
+					.image1{
+						background-image: url('images/1.jpg');
+						background-position: 85% 20%;
+					}
+					.image2 {
+						background-image: url('images/2.jpg');
+						background-position: 30% 20%;
+					}
+					.image3 {
+						background-image: url('images/3.png');
+						background-position: 55% 20%;
+					}
+					.image4 {
+						background-image: url('images/4.jpg');
+						background-position: 30% 20%;
+					}
+					.image5 {
+						background-image: url('images/5.jpg');
+						background-position: 30% 85%;
+					}
+					.image6 {
+						background-image: url('images/6.jpg');
+						background-position: 30% 1%;
+					}
+					.image7 {
+						background-image: url('images/7.jpg');
+						background-position: 30% 5%;
+					}
+					.image8 {
+						background-image: url('images/8.jpg');
+						background-position: 50% 1%;
+					}
+					.image9 {
+						background-image: url('images/9.jpg');
+						background-position: 1% 75%;
+					}
+					.image10 {
+						background-image: url('images/10.jpg');
+						background-position: 45% 1%;
+					}
+					.image11 {
+						background-image: url('images/11.jpg');
+						background-position: 90% 1%;
+					}
+					.image12 {
+						background-image: url('images/12.jpg');
+						background-position: 60% 1%;
+					}
+					.image13 {
+						background-image: url('images/13.jpg');
+						background-position: 5% 1%;
+					}	
+					.image14 {
+						background-image: url('images/14-2.jpg');
+						background-position: 5% 1%;
+					}	
+					.image15 {
+						background-image: url('images/15.jpg');
+						background-position: 65% 1%;
+					}	
+					.image16 {
+						background-image: url('images/16.jpg');
+						background-position: 1% 100%;
+					}	
+
+				.photo:nth-child(3n) {
+						-webkit-transform: rotate(2deg);
+									}
+				.photo:nth-child(2n) {
+						-webkit-transform: rotate(-1deg);
+									}
+					
+							
+					.col img:nth-child(4n){
+					margin-right: 0;
+					}
+				}
+			}
+		
+// 	.flexslider-wrap{
+// 	width: 50%;
+// 	margin:0 auto;	
+// }
+	
+
+// REGISTER SECTION
+#registry {
+		.wrapper{
+				padding: 85px 0 25px 0;
+				background: $black;
+				height: 440px;
+						.registry {
+						text-align: center;
+						margin: 0 auto;
+						min-width: 980px;
+						width: 600px;
+							.sign {
+									border-radius: 50%;
+									background-color: $dimgray;
+									width: 125px;
+									height: 125px;
+									margin:0 auto;
+									text-align: center;
+									color: #383838;
+									padding-top: 30px;
+							}
+							p {
+								color: $whitesmoke;
+								font-size: 17px;
+								padding-bottom: 10px;
+							}
+							h3 {
+								color: $whitesmoke;
+								padding-bottom: 15px;
+							}
+							a{
+								color: lighten($black, 50%);
+								text-decoration: none;
+							}
+
+				// img {
+				// 	max-width: 100px;
+				// 	max-height: 100px;
+				// }
+		}
+	}
+}
+
+	// RSVP	SECTION
+
+#rsvp {
+	.wrapper {
+				padding: 85px 0 25px 0;
+				background: $silver;
+				height: 440px;
+			.rsvp {
+			text-align: center;
+			margin: 0 auto;
+			min-width: 980px;
+			width: 600px;
+				.sign {
+									border-radius: 50%;
+									background-color: $dimgray;
+									width: 125px;
+									height: 125px;
+									margin:0 auto;
+									text-align: center;
+									color: #383838;
+									padding-top: 32px;
+							}
+							p{
+								color: black;
+								font-size: 17px;
+								padding-bottom: 10px;
+							}
+							h3 {
+								color: black;
+								padding-bottom: 15px;
+							}
+							a{
+								color: lighten($black, 50%);
+								text-decoration: none;
+							}
+		}
+	}
+}
+
+// Footer Section
+#footer {
+		background-image: url('images/CityLights.jpeg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: auto;
+		height: 600px;
+		text-align: center;
+		position: relative;
+			p{
+				position: absolute;
+				bottom: 0;
+				left: 555px;
+				color: $whitesmoke;
+				font-size: 16px;
+				}			
+			a{
+				color: lighten($black, 50%);
+				text-decoration: none;
+				}
+			}
+
+// RESPONSIVE DESIGN
+
